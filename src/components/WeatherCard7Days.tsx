@@ -23,22 +23,22 @@ const WeatherCard7Days: React.FC<WeatherCard7DaysProps> = ({ data }) => {
       {data.daily.time.map((date, idx) => (
         <div
           key={idx}
-          className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          className="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
         >
-          <h3 className="text-lg font-semibold mb-2 text-indigo-700">
+          <h3 className="text-lg font-semibold mb-2 text-indigo-700 dark:text-indigo-100">
             {new Date(date).toLocaleDateString(undefined, {
               weekday: "short",
               month: "short",
               day: "numeric",
             })}
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-gray-100">
             🌡️ Max:{" "}
             <span className="font-bold">
               {data.daily.temperature_2m_max[idx]}°C
             </span>
           </p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-gray-100">
             🌡️ Min:{" "}
             <span className="font-bold">
               {data.daily.temperature_2m_min[idx]}°C

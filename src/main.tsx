@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout children />}>
           <Route index element={<HomePage />} />
           <Route path="forecast" element={<ForecastPage />} />
         </Route>
